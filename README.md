@@ -1,4 +1,5 @@
-**vue 数据可视化大屏**
+# vue 数据可视化大屏
+分辨率 11520*2160   可调整为 7680*1440 缩放1.5倍查看
 ## Project setup
 ```
 npm install
@@ -18,10 +19,7 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
+### 目录结构
 ```
 datavisualization
 ├─ .browserslistrc
@@ -136,4 +134,12 @@ datavisualization
 │        └─ index.vue
 └─ vue.config.js
 
+```
+## 路由切换
+因隐藏WebSocket功能，路由需要手动切换
+```
+ /            //默认页       分辨率 11520*2160  可调整为 7680*1440 缩放1.5倍查看
+ /index       //案例页       分辨率 11520*2160  可调整为 7680*1440 缩放1.5倍查看
+ /product     //产品页       分辨率 11520*2160  可调整为 7680*1440 缩放1.5倍查看
+ /operation   //控制页 （ WebSocket失效 ）    分辨率 2736*1824  iPad的分辨率查看
 ```
