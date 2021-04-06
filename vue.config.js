@@ -3,7 +3,7 @@ function resolve (dir) {
   return path.join(__dirname, './', dir)
 }
 module.exports = {
-  publicPath:  process.env.NODE_ENV === "production" ? "/datavisualization" : "/", // 默认'/'，部署应用包时的基本 URL
+  publicPath:  './', // 默认'/'，部署应用包时的基本 URL
   outputDir: 'dist',
   lintOnSave: false,  
   assetsDir: '', // 相对于outputDir的静态资源(js、css、img、fonts)目录
