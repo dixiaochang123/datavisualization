@@ -13,14 +13,16 @@
         <img src="../../../assets/left/行业.png" alt="" />
         <p style="text-align: left">
           <span>行业</span> <br />
-          <span>{{websockData.industry}}信息</span>
+          <!-- <span>{{websockData.industry}}信息</span> -->
+          <span>教育行业信息</span>
         </p>
       </div>
       <div class="nth nth2 animated fadeInDown">
         <img src="../../../assets/left/规模.png" alt="" />
         <p style="text-align: left">
           <span>规模</span> <br />
-          <span>{{scale[websockData.scale]}}</span>
+          <!-- <span>{{scale[websockData.scale]}}</span> -->
+          <span>大【1000≤人员】</span>
         </p>
       </div>
       <div class="nth nth3 animated fadeInDown">
@@ -28,12 +30,18 @@
         <div style="text-align: left">
           <span>产品类型</span> <br />
           <p class="spanlist">
-           <span v-if="websockData.productType[0]">{{websockData.productType[0] || ''}}</span>
+           <!-- <span v-if="websockData.productType[0]">{{websockData.productType[0] || ''}}</span>
             <span v-if="websockData.productType[1]">{{websockData.productType[1] || ''}}</span>
             <span v-if="websockData.productType[2]">{{websockData.productType[2] || ''}}</span><br />
             <span v-if="websockData.productType[3]">{{websockData.productType[3] || ''}}</span>
             <span v-if="websockData.productType[4]">{{websockData.productType[4] || ''}}</span>
-            <span v-if="websockData.productType[5]">{{websockData.productType[5] || ''}}</span>
+            <span v-if="websockData.productType[5]">{{websockData.productType[5] || ''}}</span> -->
+            <span>弹性云主机</span>
+            <span>对象存储OOS</span>
+            <span>弹性负载均衡ELB</span>
+            <span>关系数据库MySQL</span>
+            <span>CDN内容分发</span>
+            <span>GPU云主机</span>
           </p>
         </div>
       </div>

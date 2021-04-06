@@ -157,7 +157,8 @@ export default {
         if(!!val.caseInfoItem && val.caseInfoItem.name) {
           this.setwebsockData(val)
           this.$router.push({
-            name:'Index'
+            // name:'Index'
+            path:'/index'
           })
           // window.location.href = '/'
         }

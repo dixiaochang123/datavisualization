@@ -14,12 +14,12 @@ module.exports = {
 		// checked1 选择
 		// checked2 扩容
 		
-		{checked1:false,checked2:false,industry:'教育行业',scale:'max',name: '弹性云主机',proTopMap:'弹性云主机',value1:99,value2:10.2,value3:88,value4:5.9,value5:97.5,value6:6.5},
-		{checked1:false,checked2:false,industry:'教育行业',scale:'max',name: '关系数据库MySQL',proTopMap:'关系数据库MySQL',value1:99,value2:10.2,value3:88,value4:5.9,value5:97.5,value6:6.5},
-		{checked1:false,checked2:false,industry:'教育行业',scale:'max',name: '对象存储OOS',proTopMap:'对象存储OOS',value1:99,value2:10.2,value3:88,value4:5.9,value5:97.5,value6:6.5},
-		{checked1:false,checked2:false,industry:'教育行业',scale:'max',name: 'CDN内容分发',proTopMap:'CDN内容分发',value1:99,value2:10.2,value3:88,value4:5.9,value5:97.5,value6:6.5},
-		{checked1:false,checked2:false,industry:'教育行业',scale:'max',name: '物理机',proTopMap:'物理机',value1:99,value2:10.2,value3:88,value4:5.9,value5:97.5,value6:6.5},
-		{checked1:false,checked2:false,industry:'教育行业',scale:'max',name: '云直播',proTopMap:'云直播',value1:99,value2:10.2,value3:88,value4:5.9,value5:97.5,value6:6.5},
+		{checked1:true,checked2:false,industry:'教育行业',scale:'max',name: '弹性云主机',proTopMap:'弹性云主机',value1:99,value2:10.2,value3:88,value4:5.9,value5:97.5,value6:6.5},
+		{checked1:true,checked2:false,industry:'教育行业',scale:'max',name: '关系数据库MySQL',proTopMap:'关系数据库MySQL',value1:99,value2:10.2,value3:88,value4:5.9,value5:97.5,value6:6.5},
+		{checked1:true,checked2:false,industry:'教育行业',scale:'max',name: '对象存储OOS',proTopMap:'对象存储OOS',value1:99,value2:10.2,value3:88,value4:5.9,value5:97.5,value6:6.5},
+		{checked1:true,checked2:false,industry:'教育行业',scale:'max',name: 'CDN内容分发',proTopMap:'CDN内容分发',value1:99,value2:10.2,value3:88,value4:5.9,value5:97.5,value6:6.5},
+		{checked1:true,checked2:false,industry:'教育行业',scale:'max',name: '物理机',proTopMap:'物理机',value1:99,value2:10.2,value3:88,value4:5.9,value5:97.5,value6:6.5},
+		{checked1:true,checked2:false,industry:'教育行业',scale:'max',name: '云直播',proTopMap:'云直播',value1:99,value2:10.2,value3:88,value4:5.9,value5:97.5,value6:6.5},
 		
 		{checked1:false,checked2:false,industry:'教育行业',scale:'zhong',name: '弹性云主机',proTopMap:'弹性云主机',value1:75,value2:3.7,value3:49,value4:7.3,value5:98.88,value6:7.1},
 		{checked1:false,checked2:false,industry:'教育行业',scale:'zhong',name: '关系数据库MySQL',proTopMap:'关系数据库MySQL',value1:78,value2:11.4,value3:89,value4:3.3,value5:92.5,value6:4.9},

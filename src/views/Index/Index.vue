@@ -112,54 +112,43 @@ export default {
     ...mapGetters(["websockData"]),
   },
   watch: {
-    sockedata(val) {
-      try {
-        if (val) {
-          this.reFresh = false
-          setTimeout(()=>{
-            this.reFresh = true
-          },2000)
-          if (!!val.caseInfoItem && val.caseInfoItem.name) {
-            this.setwebsockData(val);
-            this.initData();
-            // this.$router.push({
-            //   path: "/",
-            // });
-          }
-          console.log("Socket数据接收", val);
-          if (!!val.productInfoItem) {
-            this.setwebsockData(val);
-            this.$router.push({
-              path: "/product",
-            });
-          }
-        }
-      } catch (error) {}
-    },
+    // sockedata(val) {
+    //   try {
+    //     if (val) {
+    //       this.reFresh = false
+    //       setTimeout(()=>{
+    //         this.reFresh = true
+    //       },2000)
+    //       if (!!val.caseInfoItem && val.caseInfoItem.name) {
+    //         this.setwebsockData(val);
+    //         this.initData();
+    //       }
+    //       console.log("Socket数据接收", val);
+    //       if (!!val.productInfoItem) {
+    //         this.setwebsockData(val);
+    //         this.$router.push({
+    //           path: "/product",
+    //         });
+    //       }
+    //     }
+    //   } catch (error) {}
+    // },
   },
   created() {
-    this.initWebSocket();
-    this.initData();
+    // this.initWebSocket();
+    // this.initData();
     this.reFresh = false
           setTimeout(()=>{
             this.reFresh = true
           },500)
   },
   mounted() {
-    this.initWebSocket();
+    // this.initWebSocket();
     this.initData();
     this.date = toDateString(Date.now(), "yyyy-MM-dd");
     this.minute = toDateString(Date.now(), "HH:mm:ss");
     var myddy = new Date().getDay(); //获取存储当前日期
-    var weekday = [
-      "星期日",
-      "星期一",
-      "星期二",
-      "星期三",
-      "星期四",
-      "星期五",
-      "星期六",
-    ];
+    var weekday = ["星期日","星期一","星期二","星期三","星期四","星期五","星期六",];
     this.week = weekday[myddy];
   },
   destroyed() {
@@ -182,9 +171,13 @@ export default {
         item["peakUserNumber"] = parseInt(
           (item.serverNum * 300 + item.serverNum * Math.random() * 50) / 10000
         );
+        // if (
+        //   item.industry == this.websockData.industry &&
+        //   item.scale == this.websockData.scale
+        // ) {
         if (
-          item.industry == this.websockData.industry &&
-          item.scale == this.websockData.scale
+          item.industry == '教育行业' &&
+          item.scale == 'max'
         ) {
           caselist.push(item);
         }
@@ -193,13 +186,13 @@ export default {
       caselist.map((item, index) => {
         this.$set(this.caselistindex, index, item);
       });
-      console.log(this.websockData.industry, this.websockData.scale);
-      // console.log(this.caselist,caselist,rankProInfo);
 
       let proportion = rankProInfo.filter(
         (item) =>
-          item.industry == this.websockData.industry &&
-          item.scale == this.websockData.scale
+          // item.industry == this.websockData.industry &&
+          // item.scale == this.websockData.scale
+          item.industry == '教育行业' &&
+          item.scale == 'max'
       )[0].product;
       proportion.map((item, index) => {
         this.$set(this.proportion, index, item);

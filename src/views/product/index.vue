@@ -130,38 +130,38 @@ export default {
   },
   watch:{
     sockedata(val) {
-    if (val) {
-      console.log("Socket数据接收1111111111", val);
-      this.industry = val.industry;
-      this.scale = val.scale;
-      this.initdata()
-      this.case_list = val.productInfoItem
-      if(!!val.caseInfoItem && !!val.caseInfoItem.name) {
-          this.setwebsockData(val)
-          this.$router.push({
-            path:'/'
-          })
-        }
-        if(!val.caseInfoItem && !!val.industry) {
-          this.setwebsockData(val)
-          this.$router.push({
-            path:'/product'
-          })
-        }
-    }
+    // if (val) {
+    //   console.log("Socket数据接收1111111111", val);
+    //   this.industry = val.industry;
+    //   this.scale = val.scale;
+    //   this.initdata()
+    //   this.case_list = val.productInfoItem
+    //   if(!!val.caseInfoItem && !!val.caseInfoItem.name) {
+    //       this.setwebsockData(val)
+    //       this.$router.push({
+    //         path:'/index'
+    //       })
+    //     }
+    //     if(!val.caseInfoItem && !!val.industry) {
+    //       this.setwebsockData(val)
+    //       this.$router.push({
+    //         path:'/product'
+    //       })
+    //     }
+    // }
   },
 
   },
   created() {
     this.initdata();
-    this.initWebSocket();
+    // this.initWebSocket();
     this.reFresh = false
           setTimeout(()=>{
             this.reFresh = true
           },500)
   },
   mounted() {
-    this.initWebSocket();
+    // this.initWebSocket();
     this.date = toDateString(Date.now(), "yyyy-MM-dd");
     this.minute = toDateString(Date.now(), "HH:mm:ss");
     var myddy = new Date().getDay(); //获取存储当前日期
@@ -172,25 +172,26 @@ export default {
   methods: {
     ...mapActions(["setwebsockData"]),
     initdata() {
-      console.log(6666666666,this.websockData)
-      this.industry = this.websockData.industry;
-      this.scale = this.websockData.scale;
-      this.case_list = this.websockData.productInfoItem
-      // let proInfo1 = [];
-      // proInfo.map((item) => {
-      //   if (item.industry == this.industry && item.scale == this.scale) {
-      //     proInfo1.push(item);
-      //   }
-      // });
-      // proInfo1 = proInfo1.slice(0, 6);
-      // proInfo1.map((item, index) => {
-      //   productType.map((key) => {
-      //     if (item.name == key.name) {
-      //       item["describe"] = key.describe;
-      //     }
-      //   });
-      //   this.$set(this.case_list, index, item);
-      // });
+      // console.log(6666666666,this.websockData)
+      // this.industry = this.websockData.industry;
+      // this.scale = this.websockData.scale;
+      // this.case_list = this.websockData.productInfoItem
+      let proInfo1 = [];
+      proInfo.map((item) => {
+        if (item.industry == '教育行业' && item.scale == 'max') {
+          proInfo1.push(item);
+        }
+      });
+      proInfo1 = proInfo1.slice(0, 6);
+      proInfo1.map((item, index) => {
+        productType.map((key) => {
+          if (item.name == key.name) {
+            item["describe"] = key.describe;
+          }
+        });
+        this.$set(this.case_list, index, item);
+      });
+      console.log('this.case_list',this.case_list)
     },
     initWebSocket() {
       //初始化weosocket

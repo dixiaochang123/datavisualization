@@ -123,19 +123,19 @@ export default {
     caselistindex:{
       handler:function(val) {
         console.log('watch',val)
-        this.activeClick = this.websockData.activeClick;
+        // this.activeClick = this.websockData.activeClick;
         let productseleted = (!!val[this.activeClick] && !!val[this.activeClick].actualPro) ? val[this.activeClick].actualPro.map(item=>item.name):[]
         this.setproductseleted(productseleted)
       },
       deep:true,
     },
-    websockData:{
-      handler:function(val) {
-        console.log('watch',val)
-        this.activeClick = val.activeClick;
-      },
-      deep:true,
-    }
+    // websockData:{
+    //   handler:function(val) {
+    //     console.log('watch',val)
+    //     this.activeClick = val.activeClick;
+    //   },
+    //   deep:true,
+    // }
   },
   computed: {
     ...mapGetters(["websockData"]),
@@ -153,12 +153,12 @@ export default {
     return {
       width: 0,
       caselistindexcopy:[],
-      activeClick:''
+      activeClick:0
     };
   },
   mounted() {
     this.$emit('caseInfocab',this.caselistindex[0],0)
-    this.activeClick = this.websockData.activeClick
+    // this.activeClick = this.websockData.activeClick
     // let productseleted = !!this.caselistindex[0].actualPro ? this.caselistindex[0].actualPro.map(item=>item.name) : []
     // this.setproductseleted(productseleted)
     this.animateAll()
