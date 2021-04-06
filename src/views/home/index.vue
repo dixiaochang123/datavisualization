@@ -174,10 +174,10 @@ export default {
   },
   created() {
       this.caselistChange()
-      this.initWebSocket()
+      // this.initWebSocket()
   },
   mounted() {
-    this.initWebSocket()
+    // this.initWebSocket()
     this.animate()
     this.date = toDateString(Date.now(), 'yyyy-MM-dd');
     this.minute = toDateString(Date.now(), 'HH:mm:ss');
